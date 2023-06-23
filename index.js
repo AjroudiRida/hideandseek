@@ -15,7 +15,7 @@ closeMenu.addEventListener('click', () => {
   menu.classList.toggle('hidden');
 });
 
-for (let i = 0; i < menuOptions.length; i += 1) {
+for (let j = 0; i < menuOptions.length; i += 1) {
   menuOptions[i].addEventListener('click', () => {
     menu.classList.remove('visible');
     menu.classList.toggle('hidden');
