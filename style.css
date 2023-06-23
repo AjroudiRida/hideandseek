@@ -1,0 +1,1472 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  height: 100vh;
+}
+
+body {
+  font-family: 'poppins', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  background-color: #f7f7f9;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    background-color: #fff;
+    margin: 0 auto;
+  }
+
+  .animation {
+    background-color: red;
+  }
+
+  #top-navigation {
+    display: none;
+  }
+
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.8rem;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.6rem;
+  }
+
+  nav img {
+    width: 1.8rem;
+    height: 1.2rem;
+  }
+
+  .mobile-nav {
+    background-color: #6070ff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -10rem;
+    width: 0;
+    bottom: 0;
+    padding-left: 2.8rem;
+    padding-top: 10rem;
+    backdrop-filter: blur(1rem);
+    mix-blend-mode: multiply;
+    transition: all 0.5s ease;
+    visibility: hidden;
+    overflow: hidden;
+  }
+
+  .mobile-nav ul {
+    list-style: none;
+  }
+
+  .visible {
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    visibility: visible;
+  }
+
+  .hidden {
+    width: 0;
+    visibility: hidden;
+  }
+
+  #close-menu {
+    width: 1.2rem;
+    height: 1.2rem;
+    position: relative;
+    left: 80vw;
+    top: -3rem;
+  }
+
+  #close-menu:hover {
+    cursor: pointer;
+  }
+
+  .social li {
+    flex: 1;
+  }
+
+  .project-tech-stack li a {
+    font-style: normal;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: #6070ff;
+    background-color: #ebebff;
+    padding: 0.4rem 1.2rem;
+    border-radius: 0.8rem;
+  }
+
+  .mobile-nav ul li {
+    margin-bottom: 4rem;
+  }
+
+  .mobile-nav ul li a {
+    color: #fff;
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 4.4rem;
+    text-decoration: none;
+  }
+
+  .headline {
+    height: 60.4rem;
+    background-image: url("./assets/images/header-shapes-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: 0 auto;
+    gap: 1.2rem 0;
+    background-color: #fff;
+    padding: 0 1.6rem;
+    border-bottom-left-radius: 7rem;
+  }
+
+  .headline h1 {
+    flex-basis: 100%;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 5.2rem;
+    color: #172b4d;
+    margin: 0;
+  }
+
+  .headline p {
+    flex-basis: 100%;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #344563;
+    line-height: 2.4rem;
+    width: 32.7rem;
+    margin: 0;
+  }
+
+  .connect {
+    flex-basis: 100%;
+    text-decoration: none;
+    color: #7f8cff;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin: 0;
+  }
+
+  #logo {
+    text-decoration: none;
+    color: #6070ff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2rem;
+    margin-left: 1.6rem;
+  }
+
+  .social {
+    flex: 0 17.017rem;
+    list-style: none;
+    padding: 0;
+    height: 2rem;
+    display: flex;
+  }
+
+  .work {
+    height: auto;
+    display: grid;
+    grid-template: repeat(3, 1fr) / 80%;
+    justify-content: center;
+    justify-items: center;
+    row-gap: 8.8rem;
+    padding: 11.4rem 0 0 0;
+    margin: 0 auto;
+  }
+
+  .project-title {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 4.4rem;
+    color: #172b4d;
+    margin: 0;
+    margin-bottom: 1.8rem;
+  }
+
+  .project {
+    border: 0.1rem solid #dfe1e6;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.6rem 1.6rem 2.8rem 1.6rem;
+    border-radius: 1.6rem;
+    min-width: 100%;
+  }
+
+  .project-details {
+    flex-basis: 100%;
+    margin-bottom: 1.8rem;
+  }
+
+  .project-details ul {
+    flex-basis: 100%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+    width: 85%;
+  }
+
+  .project-details ul li {
+    text-align: center;
+  }
+
+  .socialmedia ul li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-details ul li:first-child {
+    font-size: 1.3rem;
+    font-style: normal;
+    line-height: 1.6rem;
+    color: #344563;
+    font-weight: 600;
+  }
+
+  .project-details ul li:nth-child(2) {
+    font-size: 1.3rem;
+    font-style: normal;
+    line-height: 1.6rem;
+    color: #7a869a;
+    font-weight: 600;
+  }
+
+  .project-details ul li:nth-child(2)::before {
+    content: url("./assets/images/Counter.png");
+    margin: 0 1.2rem;
+  }
+
+  .project-details ul li:nth-child(3) {
+    font-size: 1.3rem;
+    font-style: normal;
+    line-height: 1.6rem;
+    color: #7a869a;
+    font-weight: 600;
+  }
+
+  .project-details ul li:nth-child(3)::before {
+    content: url("./assets/images/Counter.png");
+    margin: 0 1.2rem;
+  }
+
+  .project p {
+    flex-basis: 100%;
+    margin-bottom: 1.8rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 2.4rem;
+    color: #344563;
+  }
+
+  .project-tech-stack {
+    list-style: none;
+    margin-bottom: 1.8rem;
+    padding: 0;
+    flex-basis: 29.5rem;
+    display: flex;
+    gap: 0 0.8rem;
+  }
+
+  .project-img {
+    flex-basis: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1.8rem;
+  }
+
+  .project-tech-stack a:hover {
+    text-decoration: underline;
+  }
+
+  .project .btn {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    font-size: 1.7rem;
+    line-height: 2.4rem;
+    font-weight: 500;
+    color: #396df2;
+    border: 0.1rem solid #396df2;
+    border-radius: 0.8rem;
+    padding: 1.2rem;
+    text-decoration: none;
+  }
+
+  .btn:hover {
+    background-color: #6070ff;
+    color: #fff;
+    box-shadow: 5px 5px 15px 5px rgba(64, 83, 252, 0.24);
+  }
+
+  .btn:active {
+    background-color: #2230d2;
+    color: #fff;
+  }
+
+  .project-details-modale .btn {
+    flex-basis: 15rem;
+    min-width: 15rem;
+    color: #6070ff;
+    border: 0.1rem solid #6070ff;
+    padding: 1.4rem 1rem 1.4rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 0.8rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    column-gap: 0.4rem;
+    justify-content: center;
+  }
+
+  .project-details-modale .btn:hover {
+    background-color: #6070ff;
+    color: #fff;
+  }
+
+  .about-myself .left .btn {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    font-size: 1.7rem;
+    line-height: 2.4rem;
+    font-weight: 500;
+    color: #396df2;
+    border: 0.1rem solid #396df2;
+    border-radius: 0.8rem;
+    padding: 1.2rem;
+    text-decoration: none;
+  }
+
+  .about-myself {
+    background-color: #fff;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: 11.4rem auto 0 auto;
+    padding: 0 2.4rem;
+    border-top-right-radius: 7rem;
+  }
+
+  .about-myself .title {
+    font-weight: bold;
+    font-size: 4rem;
+    line-height: 5.2rem;
+    color: #172b4d;
+    flex-basis: 32.7rem;
+    margin-top: 11.4rem;
+    margin-bottom: 1.7rem;
+  }
+
+  .about-myself p {
+    color: #344563;
+    font-size: 1.6rem;
+    font-weight: normal;
+    line-height: 2.4rem;
+    flex-basis: 32.7rem;
+    margin-bottom: 1.7rem;
+  }
+
+  .contactme {
+    color: #7f8cff;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    flex-basis: 100%;
+    margin-bottom: 1.7rem;
+  }
+
+  .socialmedia {
+    flex-basis: 100%;
+    margin-bottom: 1.7rem;
+  }
+
+  .socialmedia ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 20rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .about-myself .skills {
+    flex-basis: 100%;
+  }
+
+  .project-highlights-modal ul {
+    flex-basis: 100%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin-bottom: 2rem;
+    width: 85%;
+  }
+
+  .about-myself .skills ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .about-myself .skills ul li {
+    flex-basis: 7.2rem;
+    border-bottom: 0.1rem solid #dfe1e6;
+    color: #000;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 7.2rem;
+  }
+
+  .skills .languages div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .project-highlights-modal ul li:first-child {
+    font-size: 1.3rem;
+    font-style: normal;
+    line-height: 1.6rem;
+    color: #344563;
+    font-weight: 600;
+  }
+
+  .project-highlights-modal ul li:nth-child(2) {
+    font-size: 1.3rem;
+    font-style: normal;
+    line-height: 1.6rem;
+    color: #7a869a;
+    font-weight: 600;
+  }
+
+  .project-highlights-modal ul li:nth-child(3) {
+    font-size: 1.3rem;
+    font-style: normal;
+    line-height: 1.6rem;
+    color: #7a869a;
+    font-weight: 600;
+  }
+
+  .skills .languages div:nth-child(2) ul li {
+    display: flex;
+    align-items: center;
+    column-gap: 1.6rem;
+    border: none;
+    background-color: #f7f7f9;
+    border-radius: 0.8rem;
+    color: #253858;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+    padding-left: 1.2rem;
+  }
+
+  .skills ul li:first-child img {
+    width: 1.4rem;
+    height: 0.8rem;
+    margin-right: 1.6rem;
+  }
+
+  .skills ul li:nth-child(2) img {
+    margin-right: 1.6rem;
+  }
+
+  .skills ul li:nth-child(3) img {
+    margin-right: 1.6rem;
+  }
+
+  .skills .languages div:nth-child(2) img {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  .skills .frameworks,
+  .skill-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1.6rem;
+  }
+
+  .contact-me {
+    background-image: url("./assets/images/contact-form-shapes-mobile.png");
+    background-color: #6070ff;
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10.3rem  2.4rem 0.8rem 2.4rem;
+    margin: 17.685rem auto 0 auto;
+    border-top-left-radius: 6rem;
+  }
+
+  .contact-me h2 {
+    flex-basis: 100%;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 5.2rem;
+    color: #fff;
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+
+  .contact-me p {
+    color: #ebebff;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 5.2rem;
+  }
+
+  .contact-me button {
+    width: 14.2rem;
+    height: 4.8rem;
+    border-radius: 0.8rem;
+    color: #6070ff;
+    background-color: #fff;
+    border: 0;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+
+    /* margin-bottom: 3.2rem; */
+  }
+
+  .contact-me form {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    width: 32.7rem;
+  }
+
+  .contact-me form input {
+    padding: 1.5rem 3.8rem 1.5rem 1.6rem;
+    height: 4.8rem;
+    border-radius: 0.8rem;
+    border: 0;
+    box-sizing: border-box;
+  }
+
+  .contact-me form textarea {
+    height: 17rem;
+    padding: 1.5rem 3.8rem 1.5rem 1.6rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    border: 0;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 2.4rem;
+    font-size: 1.5rem;
+  }
+
+  hr {
+    width: 13.4rem;
+    border: 0.25rem solid #0d151e;
+    border-radius: 1rem;
+  }
+
+  .project-details-modale {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 1.6rem;
+    padding: 1.6rem;
+  }
+
+  .project-details-modale h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 4.4rem;
+    color: #172b4d;
+  }
+
+  .project-details-modale .project-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-details-modale .description {
+    color: #344563;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .project-details-modale .project-highlights-modal {
+    margin: 0;
+    justify-self: flex-end;
+  }
+
+  .project-highlights-modal ul li:nth-child(2)::before {
+    content: url("./assets/images/Counter.png");
+    margin: 0 1.2rem;
+  }
+
+  .project-highlights-modal ul li:nth-child(3)::before {
+    content: url("./assets/images/Counter.png");
+    margin: 0 1.2rem;
+  }
+
+  .project-details-modale .btnActions {
+    display: flex;
+    justify-content: space-between;
+    row-gap: 1rem;
+  }
+
+  .project-details-modale hr {
+    width: 100%;
+    border: 0.1rem solid #ebecf0;
+    margin-bottom: 2.5rem;
+  }
+
+  .project-details-modale .btn:nth-child(1)::after {
+    content: "";
+    background-image: url("./assets/images/Icon-export.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .project-details-modale .btn:nth-child(2)::after {
+    content: "";
+    background-image: url("./assets/images/Icon-github.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .bg-blur {
+    background-color: #c1c7d0;
+    position: fixed;
+    top: -100rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(0.5rem);
+    mix-blend-mode: multiply;
+    display: none;
+  }
+
+  .modal-container {
+    visibility: hidden;
+    position: fixed;
+    top: -100rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 6rem 1.6rem 5rem 1.6rem;
+    z-index: 1;
+    overflow: scroll;
+    transition: all 0.5s;
+  }
+
+  .heading-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.2rem;
+  }
+
+  .close-modal {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-right: 1.4rem;
+    cursor: pointer;
+  }
+
+  .showModal {
+    visibility: visible;
+    position: fixed;
+    top: 0;
+  }
+
+  .hiddenModal {
+    visibility: hidden;
+  }
+
+  /* .submitBtn {
+    display: flex;
+    column-gap: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+  } */
+
+  small {
+    color: #961b1b;
+    font-size: 1.5rem;
+    font-weight: 400;
+    visibility: hidden;
+    display: block;
+    margin: 1rem 0;
+  }
+
+  .email_validation {
+    border: 2px solid rgb(215, 37, 37) !important;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  header {
+    background-color: #fff;
+  }
+
+  .toolbar {
+    height: 7.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  /* .submitBtn {
+    display: flex;
+    column-gap: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+  } */
+
+  small {
+    color: #bd2929;
+    font-size: 1.5rem;
+    font-weight: 400;
+    visibility: hidden;
+    display: block;
+    margin-top: 1rem;
+  }
+
+  #top-navigation {
+    list-style: none;
+    display: flex;
+    column-gap: 3.2rem;
+  }
+
+  #top-navigation li a {
+    text-decoration: none;
+    color: #344563;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+  }
+
+  .img-container img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .skill-list img {
+    width: 0.6rem;
+    height: 1.2rem;
+  }
+
+  .toolbar nav img {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  #logo {
+    color: #6070ff;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2rem;
+    animation-name: rotateLogo;
+    animation-duration: 7s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes rotateLogo {
+    0% {
+      transform: rotate(0);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .headline {
+    height: 84.6rem;
+    background-image: url("./assets/images/Header-shapes-desktop.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    row-gap: 1.2rem;
+    border-bottom-left-radius: 100px;
+  }
+
+  .headline h1 {
+    color: #091e42;
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 6rem;
+    flex-basis: 65%;
+  }
+
+  .headline p {
+    color: #344563;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+    flex-basis: 65%;
+  }
+
+  .headline .connect {
+    color: #7f8cff;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+    flex-basis: 65%;
+  }
+
+  .headline .social {
+    list-style: none;
+    display: flex;
+    flex-basis: 65%;
+    column-gap: 1.9rem;
+  }
+
+  .project-tech-stack li {
+    color: #6070ff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    background-color: #ebebff;
+    padding: 0.4rem 1.2rem;
+    border-radius: 0.8rem;
+  }
+
+  .headline .social li {
+    flex-basis: 2rem;
+  }
+
+  .project-details ul li:nth-child(3) {
+    color: #6b778c;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+  }
+
+  .project-details ul li:nth-child(3)::before {
+    content: url("./assets/images/Counter.png");
+    margin: 0 1.2rem;
+  }
+
+  .project-details ul li:nth-child(2) {
+    color: #6b778c;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+  }
+
+  .project-details ul li:nth-child(2)::before {
+    content: url("./assets/images/Counter.png");
+    margin: 0 1.2rem;
+  }
+
+  .work {
+    display: grid;
+    grid-template: repeat(1, 20%) / 64%;
+    justify-content: center;
+    padding: 14.2rem 0;
+    gap: 14.2rem 0;
+  }
+
+  .project:nth-child(2n-1) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 2.4rem;
+    padding: 2.4rem;
+    background-color: #fff;
+    border: 0.1rem solid #dfe1e6;
+    align-items: start;
+  }
+
+  .project:nth-child(2n) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 2.4rem;
+    padding: 2.4rem;
+    background-color: #fff;
+    border: 0.1rem solid #dfe1e6;
+    flex-direction: row-reverse;
+    align-items: start;
+  }
+
+  .img-container {
+    flex-basis: 48%;
+    align-self: flex-start;
+  }
+
+  .main-container {
+    flex-basis: 48%;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-title {
+    color: #091e42;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 5.2rem;
+    margin-bottom: 2rem;
+    flex-shrink: 3;
+  }
+
+  .project-details ul {
+    flex-shrink: 1;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 3.2rem;
+  }
+
+  .project-details ul li:first-child {
+    color: #344563;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+  }
+
+  .project p {
+    color: #344563;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    margin-bottom: 2.4rem;
+    flex-shrink: 1;
+  }
+
+  .project-tech-stack {
+    list-style: none;
+    display: flex;
+    column-gap: 0.8rem;
+    margin-bottom: 4rem;
+    flex-shrink: 1;
+  }
+
+  .project .btn {
+    color: #396df2;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+    padding: 1rem;
+    border: 0.1rem solid #6070ff;
+    width: 12.6rem;
+    border-radius: 0.8rem;
+    text-decoration: none;
+    flex-shrink: 1;
+  }
+
+  .about-myself {
+    height: auto;
+    display: grid;
+    grid-template: 50% / 30% 40%;
+    justify-content: center;
+    align-items: start;
+    background-color: #fff;
+    padding: 20.6rem 0;
+    column-gap: 2.4rem;
+    border-top-right-radius: 15rem;
+  }
+
+  .about-myself .left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.2rem;
+  }
+
+  .about-myself .left .title {
+    color: #091e42;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 5.2rem;
+  }
+
+  .contact-me p {
+    width: 44.7rem;
+    min-width: 44.7rem;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+    text-align: center;
+  }
+
+  .about-myself .left p {
+    color: #344563;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+  }
+
+  .about-myself .left .contactme {
+    color: #7f8cff;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+  }
+
+  .project-highlights-modal ul {
+    flex-basis: 100%;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin-bottom: 2rem;
+    width: 85%;
+  }
+
+  .about-myself .right ul {
+    list-style: none;
+    flex-basis: 70%;
+  }
+
+  .languages div:nth-child(2) ul {
+    list-style: none;
+    display: flex;
+    align-items: start;
+    column-gap: 1.2rem;
+  }
+
+  .about-myself .left .socialmedia ul {
+    display: flex;
+    list-style: none;
+    width: fit-content;
+  }
+
+  .project-highlights-modal ul li:first-child {
+    font-size: 1.3rem;
+    font-style: normal;
+    line-height: 1.6rem;
+    color: #344563;
+    font-weight: 600;
+  }
+
+  .project-highlights-modal ul li:nth-child(2) {
+    font-size: 1.3rem;
+    font-style: normal;
+    line-height: 1.6rem;
+    color: #7a869a;
+    font-weight: 600;
+  }
+
+  .project-highlights-modal ul li:nth-child(3) {
+    font-size: 1.3rem;
+    font-style: normal;
+    line-height: 1.6rem;
+    color: #7a869a;
+    font-weight: 600;
+  }
+
+  .languages div:nth-child(2) ul li {
+    flex-basis: 30%;
+    color: #253858;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+    align-self: flex-start;
+    padding: 1.2rem 1.2rem 2rem 1.2rem;
+    background-color: #f7f7f9;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-myself .left .socialmedia ul li {
+    margin-left: 10%;
+  }
+
+  .about-myself .btn {
+    text-decoration: none;
+  }
+
+  .project-details-modale .btn {
+    flex-basis: 16rem;
+    min-width: 16rem;
+    color: #6070ff;
+    border: 0.1rem solid #6070ff;
+    padding: 1.4rem 1rem 1.4rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 0.8rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    column-gap: 1.3rem;
+    justify-content: center;
+  }
+
+  .project-details-modale .btn:hover {
+    background-color: #6070ff;
+    color: #fff;
+  }
+
+  .about-myself .left .btn {
+    color: #396df2;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+    letter-spacing: 0.03em;
+    width: fit-content;
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    border: 0.1rem solid #396df2;
+    text-align: center;
+  }
+
+  .languages div img {
+    width: 1.2rem;
+    height: 0.6rem;
+  }
+
+  .languages div:nth-child(2) ul li img {
+    width: 4.8rem;
+    height: 4.8rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .about-myself .right ul li span {
+    color: #344563;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+  }
+
+  .languages div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem 2.4rem 2.4rem;
+  }
+
+  .skill-list {
+    flex-basis: 30%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2.4rem 4rem 2.4rem 2.4rem;
+    align-items: center;
+    border-bottom: 0.1rem solid #dfe1e6;
+  }
+
+  form button {
+    flex-basis: 4.8rem;
+    color: #6070ff;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+    width: 14.2rem;
+    padding: 1.2rem 1.6rem;
+    border-radius: 0.8rem;
+    background-color: #fff;
+    border: 0;
+    align-self: center;
+    transition: all 1s ease;
+  }
+
+  .contact-me button {
+    width: 14.2rem;
+    height: 4.8rem;
+    border-radius: 0.8rem;
+    color: #6070ff;
+    background-color: #fff;
+    border: 0;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 2.4rem;
+
+    /* margin-bottom: 3.2rem; */
+  }
+
+  .contact-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16.2rem;
+    background-image: url("./assets/images/contact-form-background-shapes.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    background-color: #6070ff;
+    row-gap: 2.7rem;
+    border-top-left-radius: 15rem;
+  }
+
+  .contact-me form {
+    width: 44.7rem;
+    min-width: 44.7rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.7rem;
+  }
+
+  .contact-me h2 {
+    width: 44.7rem;
+    min-width: 44.7rem;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 5.2rem;
+    color: #fff;
+    text-align: center;
+  }
+
+  form input {
+    flex-basis: 4.8rem;
+    border-radius: 0.2rem;
+    border: 0;
+    padding: 1.5rem 3.8rem 1.5rem 1.6rem;
+  }
+
+  form input::placeholder {
+    color: #172b4d;
+    font-size: 1.7rem;
+    font-weight: 400;
+    line-height: 2rem;
+  }
+
+  form textarea {
+    flex-basis: 17rem;
+    border: 0;
+    border-radius: 0.2rem;
+    padding: 1.5rem 3.8rem 1.5rem 1.6rem;
+  }
+
+  form textarea::placeholder {
+    color: #b3bac5;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+  }
+
+  .project .btn:hover {
+    color: #fff;
+    background-color: #6070ff;
+    box-shadow: 5px 5px 15px 5px rgba(64, 83, 252, 0.24);
+  }
+
+  .project .btn:active {
+    background-color: #2230d2;
+    color: #fff;
+  }
+
+  .about-myself .btn:hover {
+    color: #fff;
+    background-color: #6070ff;
+    box-shadow: 5px 5px 15px 5px rgba(64, 83, 252, 0.24);
+  }
+
+  .about-myself .btn:active {
+    background-color: #2230d2;
+    color: #fff;
+  }
+
+  form button:hover {
+    cursor: pointer;
+    background-color: #6070ff;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  .project-details-modale {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 1.6rem;
+    padding: 1.6rem;
+    max-width: 115.6rem;
+    margin: 0 auto;
+  }
+
+  .project-details-modale .project-img {
+    width: 100%;
+  }
+
+  .project-details-modale h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 4.4rem;
+    color: #172b4d;
+  }
+
+  .project-details-modale .description {
+    color: #344563;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .project-details-modale .project-highlights-modal {
+    margin: 0;
+    justify-self: flex-end;
+  }
+
+  .project-highlights-modal ul li:nth-child(2)::before {
+    content: url("./assets/images/Counter.png");
+    margin: 0 1.2rem;
+  }
+
+  .project-highlights-modal ul li:nth-child(3)::before {
+    content: url("./assets/images/Counter.png");
+    margin: 0 1.2rem;
+  }
+
+  .project-details-modale .btnActions {
+    display: flex;
+    padding: 0 1rem;
+    row-gap: 1rem;
+    column-gap: 1rem;
+  }
+
+  .project-details-modale hr {
+    width: 100%;
+    border: 0.1rem solid #ebecf0;
+    margin-bottom: 2.5rem;
+  }
+
+  .bg-blur {
+    background-color: #c1c7d0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(0.5rem);
+    mix-blend-mode: multiply;
+    display: none;
+  }
+
+  .modal-container {
+    visibility: hidden;
+    position: fixed;
+    top: -100rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 7.7rem 14.2rem 10rem 14.2rem;
+    overflow: scroll;
+    z-index: 1;
+    transition: all 0.5s;
+  }
+
+  .main-container-modal {
+    margin-top: 5.9rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-container-modal .description {
+    flex-basis: 65%;
+  }
+
+  .main-container-modal .container-tech {
+    flex-basis: 35%;
+  }
+
+  .main-container-modal .project-tech-stack {
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-details-modale .btn:nth-child(1)::after {
+    content: "";
+    background-image: url("./assets/images/Icon-export.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .project-details-modale .btn:nth-child(2)::after {
+    content: "";
+    background-image: url("./assets/images/Icon-github.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .heading-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.6rem;
+  }
+
+  .close-modal {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-right: 1.4rem;
+    cursor: pointer;
+  }
+
+  .showModal {
+    visibility: visible;
+    position: fixed;
+    top: 0;
+  }
+
+  .hiddenModal {
+    visibility: hidden;
+  }
+
+  .email_validation {
+    border: 2px solid rgb(215, 37, 37) !important;
+  }
+}

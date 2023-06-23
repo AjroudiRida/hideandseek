@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="bg-blur"></div>
+    <div class="modal-container">
+        <div class="project-details-modale">
+            <div class="heading-container">
+                <h3></h3>
+                <img class="close-modal" src="./assets/images/close-modal.png">
+            </div>
+            <div class="project-highlights-modal">
+                <ul>
+                    <li>CANOPY</li>
+                    <li>Back End Dev</li>
+                    <li>2015</li>
+                </ul>
+            </div>
+            <div class="img-container-modal">
+                <img class="project-img" src="">
+            </div>
+            <div class="main-container-modal">
+                <p class="description">
+                </p>
+                <div class="container-tech">
+                    <ul class="project-tech-stack">
+                        <li><a>HTML</a></li>
+                        <li><a>CSS</a></li>
+                        <li><a>Javascript</a></li>
+                    </ul>
+                    <hr>
+                    <div class="btnActions">
+                        <a href="#" class="btn">See live</a>
+                        <a href="#" class="btn">See resource</a>
+                    </div>
+                </div>       
+            </div>
+        </div>
+    </div>
+    <header>
+        <section class="toolbar">
+            <a id="logo" href="#">My Logo</a>
+            <nav>
+                <img class="hamburgerBtn" src="./assets/images/menu.png">
+                <div class="mobile-nav">
+                    <img id="close-menu" src="./assets/images/close.png">
+                    <ul>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <ul id="top-navigation">
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>    
+    <section class="headline">
+        <h1>I’m Alexandra.<br>Glad to see you!</h1>
+        <p>I’m a software developer! I can help you build a product , feature or website Look through some of my 
+                work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.</p>
+        <h3 class="connect">LET’S CONNECT</h3>
+        <ul class="social">
+            <li><a class="social"><img src="./assets/images/social-3.png"></a></li>
+            <li><a class="social"><img src="./assets/images/social-4.png"></a></li>
+            <li><a class="social"><img src="./assets/images/social-1.png"></a></li>
+            <li><a class="social"><img src="./assets/images/social-5.png"></a></li>
+            <li><a class="social"><img src="./assets/images/social-2.png"></a></li>
+        </ul>
+    </section>
+    <section id="portfolio" class="work">
+       
+        
+    </section>
+    
+    <section id="about" class="about-myself">
+        <div class="left">
+            <h2 class="title">About Myself</h2>
+            <p>Hello I’m a software developer! I can help you build a product , feature or website. Look through some of my work and 
+                experience! If you like what you see and have a project you need coded, don’t hesitate to contact me.
+            </p>
+            <h3 class="contactme">LETS CONNECT</h3>
+            <div class="socialmedia">
+                <ul>
+                    <li><a href="#"><img src="./assets/images/social-5.png"></a></li>
+                    <li><a href="#"><img src="./assets/images/social-4.png"></a></li>
+                    <li><a href="#"><img src="./assets/images/social-2.png"></a></li>
+                    <li><a href="#"><img src="./assets/images/social-3.png"></a></li>
+                    <li><a href="#"><img src="./assets/images/social-1.png"></a></li>
+                </ul>
+            </div>
+            <a href="#" class="btn">Get my resume</a>
+        </div>
+        <div class="skills right">
+            <ul>
+                <li class="languages">
+                    <div>
+                        <span >Languages</span>
+                        <img src="./assets/images/arrow-1.png">
+                    </div>
+                    <div>
+                        <ul>
+                            <li><img src="./assets/images/js.png">Javascript</li>
+                            <li><img src="./assets/images/html.png">HTML</li>
+                            <li><img src="./assets/images/css.png">CSS</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="skill-list">
+                    <span>Framework</span>
+                    <img src="./assets/images/arrow.png">
+                </li>
+                <li class="skill-list">
+                    <span>Skills</span>
+                    <img src="./assets/images/arrow.png">
+                </li>
+            </ul>
+        </div>
+        
+    </section> 
+    <section id="contact" class="contact-me">
+        <h2>Contact me</h2>
+        <p>If you have an application you are interested in developing, a feature that you need built or a project that needs coding. 
+            I’d love to help with it!</p>
+        <form action="https://formspree.io/f/xeqwblqg" method="post" id="contact-form">
+            <input class="input" type="text" name="name"  maxlength="30"  placeholder="name" id="name" required>
+            <input class="input" type="email" name="email" placeholder="loremipsum@gmail.com" id="email" required>
+            <textarea class="input" name="message" id="message"  placeholder="Write your message here" maxlength="500" required></textarea>
+            <div class="submitBtn">
+                <button type="submit">Get in touch</button><small></small>
+            </div>
+        </form>
+        <hr>
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>
